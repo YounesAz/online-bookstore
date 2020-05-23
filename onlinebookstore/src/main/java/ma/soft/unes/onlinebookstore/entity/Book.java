@@ -42,16 +42,16 @@ public class Book {
 	@Column(name="units_in_stock")
 	private int unitsInStock;
 	
-	private boolean avtive;
+	private boolean active;
 	
 	@Column(name="date_created")
-	private Date dateCreated;
+	private Date createdOn;
 	
 	@Column(name="last_updated")
-	private Date lastUpdated;
+	private Date updatedOn;
 	
 	@ManyToOne
-	@JoinColumn(name="category_id",nullable=false)
+	@JoinColumn(name="category_id")
 	private BookCategory category;
 
 }
